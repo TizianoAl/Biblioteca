@@ -55,26 +55,27 @@ class Persona(models.Model):
 
 class Libro(Material):
     editorial = models.CharField(max_length=143)
+    portada = models.FileField(blank = True)
 
     def __str__(self):
-        return str(Material.titulo)
+        return str(self.titulo)
 
 class Revista(Material):
 
     def __str__(self):
-        return str(Material.titulo)
+        return str(self.titulo)
 
 class Alumno(Persona):
     matricula = models.AutoField(primary_key=True)
 
     def __str__(self):
-        return str(Persona.nombre)
+        return str(self.nombre)
 
 class Profesor(Persona):
     numEmpleado = models.AutoField(primary_key=True)
 
     def __str__(self):
-        return str(Persona.nombre)
+        return str(self.nombre)
 
 
 
