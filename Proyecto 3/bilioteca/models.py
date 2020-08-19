@@ -7,7 +7,7 @@ class Prestamo(models.Model):
     fechaSalida = models.CharField(max_length=143)
     fechaRegreso = models.CharField(max_length=143)
 
-    def cuota(self):
+    def cuota():
         pass
 
     def __str__(self):
@@ -22,13 +22,13 @@ class Material(models.Model):
     status = models.CharField(max_length=143)
     prestamo = models.ForeignKey('Prestamo', on_delete=models.CASCADE, null=False)
 
-    def altaMaterial(self):
+    def altaMaterial():
         pass   
 
-    def bajaMaterial(self):
+    def bajaMaterial():
         pass  
 
-    def cambioMaterial(self):
+    def cambioMaterial():
         pass 
 
     def __str__(self):
@@ -44,10 +44,10 @@ class Persona(models.Model):
     adeudo = models.FloatField()
     prestamo = models.OneToOneField('Prestamo', on_delete=models.CASCADE, null=False)
 
-    def llevarMaterial(self):
+    def llevarMaterial():
         pass   
 
-    def dejarMaterial(self):
+    def dejarMaterial():
         pass  
 
     def __str__(self):
